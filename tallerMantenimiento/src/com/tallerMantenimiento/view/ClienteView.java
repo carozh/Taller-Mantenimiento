@@ -55,7 +55,7 @@ public class ClienteView {
 	*
 	***********************************************************************************************************************/
 	public void listar() {
-		ArrayList<Cliente> clientes;
+		ArrayList<Cliente> clientes ;
 
 		try {
 			clientes = clienteCtrl.list();
@@ -65,6 +65,7 @@ public class ClienteView {
 		} catch (Throwable e) {
 			System.out.println(e.getMessage());
 		}
+		
 	}
 	
 	/**********************************************************************************************************************

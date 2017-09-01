@@ -1,5 +1,6 @@
 package com.tallerMantenimiento.view.Menú;
 
+import java.util.Date;
 import java.util.Scanner;
 
 import com.tallerMantenimiento.entity.Cliente;
@@ -62,8 +63,9 @@ public class MenusDetalleMantenimiento {
 			case 2:
 				System.out.print("Fecha anterior: ");
 				System.out.println(detalleMantenimiento.getFecha());
-				String apellido = ReadTypes.leerCadena(scanner, "Ingrese la nueva fecha: ");
-				detalleMantenimiento.setFecha(fecha);
+				String fecha = ReadTypes.leerCadena(scanner, "Ingrese la nueva fecha: ");
+				detalleMantenimiento.setFecha(new Date(fecha));
+				//new Date()
 				break;
 			
 			}
