@@ -161,7 +161,7 @@ public class MenusCliente {
 				//cliente = new Cliente(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente a buscar: "));
 				clienteView = new ClienteView(conexion, leer);
 				try {
-					clienteView.buscar(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente"));;
+					clienteView.buscar(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente: "));;
 				} catch (Throwable e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -175,20 +175,25 @@ public class MenusCliente {
 				
 				break;
 			case 4:
-				Cliente cliente = new Cliente(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente a actualizar: "));
-				/*try {
+				clienteView = new ClienteView(conexion, leer);
+				//Cliente cliente = new Cliente(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente a actualizar: "));
+				clienteView.actualizar();
+				//menuModificar(leer, cliente);
+				
+				/*Cliente cliente = new Cliente(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente a actualizar: "));
+				try {
 					clienteView.buscar(ReadTypes.leerCadena(leer, "Ingrese el NIT del cliente"));;
 				} catch (Throwable e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}*/
+				}
 				clienteView = new ClienteView(conexion, leer);
 				if (cliente.getNIT() == null) {
 					System.out.println("Código Inexistente ");
 				} 
 				else {
-					/*System.out.println(cliente);
-					System.out.println();*/
+					System.out.println(cliente);
+					System.out.println();
 					menuModificar(leer, cliente);
 					//System.out.println(cliente);
 					try {
@@ -200,7 +205,7 @@ public class MenusCliente {
 					}
 					
 				}
-				break;
+				break;*/
 			}
 		}
 
@@ -209,7 +214,7 @@ public class MenusCliente {
 /**********************************************************************************************************************
 *
 ***********************************************************************************************************************/
-public static int actualizar(Scanner leer) {
+/*public static int actualizar(Scanner leer) {
 	int opcion;
 
 	while (true) {
@@ -238,7 +243,7 @@ public static int actualizar(Scanner leer) {
 		}
 	}
 }
-
+*/
 
 /**********************************************************************************************************************
 *

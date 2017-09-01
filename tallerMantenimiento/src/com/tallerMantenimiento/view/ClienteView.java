@@ -89,7 +89,7 @@ public class ClienteView {
 	public void actualizar() {
 		String NIT;
 			
-		NIT = ReadTypes.leerCadena(scanner, "Ingrese el NIT del cliente a modificar; ");
+		NIT = ReadTypes.leerCadena(scanner, "Ingrese el NIT del cliente a modificar:  ");
 		cliente = new Cliente(NIT);
 		
 		
